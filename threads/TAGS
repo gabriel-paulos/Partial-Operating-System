@@ -1,0 +1,176 @@
+
+interrupt.c,523
+static int loud 16,352
+void register_interrupt_handler(20,505
+int interrupts_on(47,1240
+int interrupts_off(53,1318
+int interrupts_set(60,1475
+int interrupts_enabled(75,1755
+void interrupts_quiet(85,1911
+void spin(90,1951
+int unintr_printf(108,2268
+static void set_signal(123,2504
+static int first 133,2658
+static struct timeval start,134,2680
+static struct timeval start, end,134,2680
+static struct timeval start, end, diff 134,2680
+static void interrupt_handler(140,2864
+static void set_interrupt(171,3721
+
+show_handler.c,25
+test(8,121
+main(24,446
+
+show_ucontext.c,115
+ucontext_t mycontext 20,410
+get_start_end(23,446
+main(40,816
+call_setcontext(148,5228
+show_interrupt(155,5330
+
+test_basic.c,15
+int main(4,46
+
+test_cv_broadcast.c,11
+main(6,73
+
+test_cv_signal.c,11
+main(6,73
+
+test_lock.c,11
+main(6,73
+
+test_preemptive.c,11
+main(6,73
+
+test_thread.c,1618
+#define DURATION 9,151
+#define NTHREADS 10,178
+#define LOOPS	11,205
+long *stack_array[stack_array22,468
+static void mallinfo_check(24,508
+void test_basic(36,954
+static void grand_finale(222,6338
+static void hello(235,6619
+static int fact(259,7138
+static void suicide(269,7308
+static int flag_value;277,7406
+static int set_flag(280,7492
+static void finale(285,7578
+#define NPOTATO 300,7882
+static int potato[potato302,7909
+static int potato_lock 303,7937
+static struct timeval pstart;304,7965
+void test_preemptive(306,7996
+static void do_potato(346,8927
+static int try_move_potato(370,9386
+static struct wait_queue *queue;queue399,10120
+static int done;400,10153
+static int nr_sleeping;401,10170
+static void test_wakeup_thread(403,10195
+void test_wakeup(437,10995
+static Tid wait[wait515,13007
+static void test_wait_thread(517,13035
+void test_wait(539,13673
+static void test_wait_kill_thread(578,14590
+void test_wait_kill(585,14738
+static void test_wait_parent_thread(602,15135
+void test_wait_parent(625,15948
+static struct lock *testlock;testlock669,17015
+static struct cv *testcv_signal[testcv_signal670,17045
+static struct cv *testcv_broadcast;testcv_broadcast671,17088
+static volatile unsigned long testval1;673,17125
+static volatile unsigned long testval2;674,17165
+static volatile unsigned long testval3;675,17205
+#define NLOCKLOOPS 677,17246
+static void test_lock_thread(679,17273
+void test_lock(723,18345
+static void test_cv_signal_thread(752,18949
+void test_cv_signal(793,19977
+static void test_cv_broadcast_thread(829,20770
+void test_cv_broadcast(870,21795
+
+test_wait.c,11
+main(6,73
+
+test_wait_kill.c,11
+main(6,73
+
+test_wait_parent.c,11
+main(6,73
+
+test_wakeup_all.c,11
+main(6,73
+
+test_wakeup.c,11
+main(6,73
+
+thread.c,1247
+     RUNNING 8,112
+     READY 9,130
+     BLOCKED 10,146
+     EXITED 11,164
+struct thread* current_thread;15,189
+struct thread* existing_threads[existing_threads16,220
+struct thread* next_t;17,273
+struct ready_queue* readyq;18,296
+volatile int setcontext_called 19,324
+struct wait_queue 22,400
+struct thread 27,497
+  Tid id;28,513
+  int state;29,523
+  ucontext_t* context;30,536
+  void* stack;31,560
+  struct thread* next;32,575
+struct ready_queue{ready_queue35,602
+  struct thread* head;37,623
+  int size;38,646
+void thread_stub(42,663
+void dequeue(51,780
+void enqueue(78,1241
+struct thread* search_t(96,1505
+void thread_init(114,1736
+Tid thread_id(137,2432
+Tid thread_create(142,2482
+Tid thread_yield(199,4070
+void thread_exit(324,7865
+Tid thread_kill(329,7897
+struct wait_queue * wait_queue_create(340,8230
+void wait_queue_destroy(352,8376
+Tid thread_sleep(358,8447
+int thread_wakeup(366,8653
+Tid thread_wait(373,8782
+struct lock 379,8831
+struct lock * lock_create(383,8877
+void lock_destroy(395,9007
+void lock_acquire(404,9095
+lock_release(412,9174
+struct cv 419,9243
+struct cv * cv_create(423,9287
+void cv_destroy(435,9401
+void cv_wait(444,9479
+void cv_signal(452,9584
+void cv_broadcast(460,9691
+
+interrupt.h,99
+#define _INTERRUPT_H_2,22
+#define TBD(7,85
+#define SIG_TYPE 14,318
+#define SIG_INTERVAL 16,396
+
+test_thread.h,29
+#define _TEST_THREAD_H_2,24
+
+thread.h,295
+#define _THREAD_H_2,19
+typedef int Tid;4,39
+#define THREAD_MAX_THREADS 5,56
+#define THREAD_MIN_STACK 6,88
+enum { THREAD_ANY 15,430
+	THREAD_SELF 16,454
+	THREAD_INVALID 17,473
+	THREAD_NONE 18,495
+	THREAD_NOMORE 19,514
+	THREAD_NOMEMORY 20,535
+	THREAD_FAILED 21,558
+thread_ret_ok(25,600
